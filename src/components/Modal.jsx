@@ -24,7 +24,20 @@ const Modal = () => {
       }}
     >
       <div className="modal-content">
-        <span className="close">&times;</span>
+        <div
+          className="close"
+          style={{
+            textAlign: "right",
+            border: "1px solid red",
+            // width: "10px",
+            display: "flex",
+            justifyContent: "right",
+            alignItems: "right",
+            marginBottom: "15px"
+          }}
+        >
+          &times;
+        </div>
         <form
           onSubmit={handleSubmit}
           style={{
@@ -34,12 +47,12 @@ const Modal = () => {
         >
           <div
             style={{
-              border: "3px solid black",
+              border: "3px solid gray",
               padding: "5px",
               borderRadius: "25px",
               width: "100%",
               display: "flex",
-              justifyContent: "space-around",
+              justifyContent: "space-between",
             }}
           >
             <input
@@ -64,7 +77,7 @@ const Modal = () => {
                 outline: 0,
                 borderRadius: "20px",
                 backgroundColor: "#d62828",
-                padding: "10px 25px",
+                padding: "12px 40px",
                 cursor: "pointer",
                 color: "white",
                 fontSize: "10px",
