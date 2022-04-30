@@ -2,17 +2,20 @@ import React, { useState } from "react";
 import "../index.css";
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
-
-// import Modal from "./Modal";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const LandingPage = () => {
   const [open, setOpen] = useState(false);
   const [email, setEmail] = useState("");
   const onOpenModal = () => setOpen(true);
   const onCloseModal = () => setOpen(false);
+  const notify = () => toast("You've been added to the wait list!");
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    notify();
+    setEmail("");
     onCloseModal();
   };
 
@@ -143,6 +146,7 @@ const LandingPage = () => {
           </div>
         </div>
       </Modal>
+      <ToastContainer />
     </div>
   );
 };
