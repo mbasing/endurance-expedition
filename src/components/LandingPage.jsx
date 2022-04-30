@@ -1,5 +1,6 @@
 import React from "react";
 import "../index.css";
+import Modal from "./Modal";
 
 const LandingPage = () => {
   return (
@@ -48,11 +49,14 @@ const LandingPage = () => {
             cursor: "pointer",
             marginTop: "80px",
             fontSize: "18px",
+            fontFamily:
+              '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif',
           }}
         >
           Join wait list
         </button>
       </div>
+      <Modal />
     </div>
   );
 };
