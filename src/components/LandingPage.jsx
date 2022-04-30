@@ -10,7 +10,7 @@ const LandingPage = () => {
   const [email, setEmail] = useState("");
   const onOpenModal = () => setOpen(true);
   const onCloseModal = () => setOpen(false);
-  const notify = () => toast("You've been added to the wait list!");
+  const notify = () => toast.success("Welcome aboard ye brave soul!");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -49,9 +49,7 @@ const LandingPage = () => {
         return <span style={{ color: "#d62828" }}>doubtful,</span> <br /> honor
         and recognition in case of success
       </p>
-
       <div>
-        <span></span>
         <button
           onClick={onOpenModal}
           className="waitlist"
@@ -73,13 +71,10 @@ const LandingPage = () => {
           Join wait list
         </button>
       </div>
-
       <Modal open={open} onClose={onCloseModal} center>
         <div
           className="modal"
           style={{
-            // display: "grid",
-            // placeItems: "left",
             borderRadius: "10px",
             padding: "10px 50px 30px",
             justifyContent: "center",
@@ -146,7 +141,7 @@ const LandingPage = () => {
           </div>
         </div>
       </Modal>
-      <ToastContainer />
+      <ToastContainer type={"success"} />
     </div>
   );
 };
