@@ -75,11 +75,10 @@ const LandingPage = () => {
         <div
           className="modal"
           style={{
-            borderRadius: "10px",
             padding: "10px 50px 30px",
             justifyContent: "center",
             backgroundColor: "white",
-            width: "350px",
+            width: "300px",
             margin: "auto",
             marginTop: "20px",
           }}
@@ -112,7 +111,7 @@ const LandingPage = () => {
                   }}
                   required
                   type="email"
-                  placeholder="Enter your email..."
+                  placeholder="Enter your email address..."
                   value={email}
                   onChange={(e) => {
                     setEmail(e.target.value);
