@@ -12,6 +12,7 @@ const LandingPage = () => {
   const [email, setEmail] = useState("");
   const onOpenModal = () => setOpen(true);
   const onCloseModal = () => setOpen(false);
+  
   const notify = () => toast.success("Welcome aboard ye brave soul!");
 
   const handleSubmit = (e) => {
@@ -27,7 +28,7 @@ const LandingPage = () => {
       style={{
         display: "grid",
         placeItems: "center",
-        margin: "85px auto",
+        margin: "0 auto",
       }}
     >
       <p
@@ -51,10 +52,7 @@ const LandingPage = () => {
         return <span style={{ color: "#d62828" }}>doubtful,</span> <br /> honor
         and recognition in case of success
       </p>
-      <Lottie
-        animationData={arrowDown}
-      />
-      ;
+      <Lottie animationData={arrowDown} />;
       <div>
         <button
           onClick={onOpenModal}

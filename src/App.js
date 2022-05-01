@@ -1,4 +1,5 @@
 import LandingPage from "./components/LandingPage";
+import TopNavigation from "./components/TopNavigation";
 
 const App = () => {
   return (
@@ -10,7 +11,10 @@ const App = () => {
         overflow: "hidden auto",
       }}
     >
-      <LandingPage />
+      <TopNavigation />
+      <div>
+        <LandingPage />
+      </div>
     </div>
   );
 };
