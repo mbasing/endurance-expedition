@@ -4,6 +4,8 @@ import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Lottie from "lottie-react";
+import arrowDown from "./arrow-down.json";
 
 const LandingPage = () => {
   const [open, setOpen] = useState(false);
@@ -49,6 +51,10 @@ const LandingPage = () => {
         return <span style={{ color: "#d62828" }}>doubtful,</span> <br /> honor
         and recognition in case of success
       </p>
+      <Lottie
+        animationData={arrowDown}
+      />
+      ;
       <div>
         <button
           onClick={onOpenModal}
@@ -62,7 +68,6 @@ const LandingPage = () => {
             backgroundColor: "#d62828",
             color: "white",
             cursor: "pointer",
-            marginTop: "80px",
             fontSize: "18px",
             fontFamily:
               '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif',
